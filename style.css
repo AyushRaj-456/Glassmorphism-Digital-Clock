@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #230876;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background:linear-gradient(#33c7ec,#158ff3);
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    animation: animate 5s ease-in-out infinite ;
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background:linear-gradient(#de0c0c,#e14b17);
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    animation: animatee 3.8s ease-in-out infinite ;
+    
+}
+
+@keyframes animate{
+    0%,100%{
+        transform: translateY(-25px);
+    }
+    50%{
+        transform: translateY(85px);
+    }
+}
+
+@keyframes animatee{
+    0%,100%{
+        transform: translateY(-75px);
+    }
+    50%{
+        transform: translateY(24px);
+    }
+}
+
+.clock{
+    position: relative;
+    width:90%;
+    height: 250px;
+    background: rgba(255,255,255,0.05); 
+  
+    box-shadow: 0.15px 25px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+}
+
+.clock .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.clock .container h2 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.clock .container h2:nth-child(odd){
+    
+    padding: 5px 15px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    margin: 0 10px;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.clock .container h2#secs{
+    color: #f1da4f;
+}
+
+#ampm{
+    position:relative ;
+    top: -10px;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
+}
+
+#foot{
+    font-weight:bold;
+    color: #f1da4f;
+    font-family: 'Varela Round', sans-serif;  
+
+}
